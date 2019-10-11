@@ -1,0 +1,46 @@
+//Style for the navbar
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#studentsidebar {
+  min-width: 250px;
+  background: #333232;
+  max-width: 250px;
+  transition: all 0.3s;
+  min-height: 100vh;
+  color: #fff;
+}
+
+#studentsidebar.active {
+  margin-left: -250px;
+}
+
+#studentsidebar .sidebar-header {
+  padding: 20px;
+  background: #114773;
+}
+
+#studentsidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  border-bottom: 1px solid #4d4b4b;
+}
+//change the color once hovering
+#studentsidebar ul li a:hover {
+  color: #000000;
+  background: #fff;
+}
+
+//This to hide the sidebar when the screen gets smaller
+@media (max-width: 768px) {
+  #studentsidebar {
+    margin-left: -250px;
+  }
+
+}

@@ -1,0 +1,9 @@
+<!--Here is the Navbar that will show the currentStudent first and last names, usnig two way binding-->
+<nav class="navbar bg-dark">
+  <a class="nav-link-text">Courses Portal</a>
+  <form class="form-inline" *ngIf="currentStudent">
+    <a class="nav-link-text mx-3">{{StudentLastName + ', ' + StudentFirstName}}</a>
+<!--    This button will show once the user sign in; it takes the uid from firebase so that the user can sign out-->
+    <button class="btn btn-success mx-5" type="submit" *ngIf="(Fauth.user$ | async)?.uid" (click)="Fauth.logout()">Sign out</button>
+  </form>
+</nav>

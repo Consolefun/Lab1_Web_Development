@@ -1,0 +1,89 @@
+<app-nav-bar></app-nav-bar>
+
+<!--This page has two form; one is about the login, and the other is for the sign up-->
+<!--Bootstrap is used-->
+
+<section class="StudentHomePage style=" style="background-color:#114773; background-image:  url(../assets/img/ISAO0.jpg);">
+
+
+<!--  The first container is for the sign in form-->
+    <div class="container studentlogin mt-5" *ngIf="signInStudentP">
+      <div class="row">
+        <div class=" SLogin text-white bg-primary align-self-center col-md-4">
+            <h2 class="py-3 left-side text-center">Login Form</h2>
+        </div>
+        <div class="col-md-8 py-3 bg-white border">
+          <form class="form" (ngSubmit)="LogIn($event)">
+            <div class="row mt-5">
+<!--              Using two way binding to get the values -->
+<!--              form-group is for having space -->
+              <div class="form-group col-md-6">
+                <span class=" pb-2 text-danger">Email address:</span>
+                <input class="form-control" name = "studentEmailPortalSystem" placeholder="Enter your E-mail address"  type="text" [(ngModel)]="studentEmailPortalSystem" required>
+              </div>
+              <div class="form-group col-md-6">
+                <span class="text-danger">Password:</span>
+                <input class="form-control" name = "StudentPasswordPortalSystem" placeholder="Enter your Password" type="password" [(ngModel)]="StudentPasswordPortalSystem" required>
+              </div>
+            </div>
+<!--            This div is to show an error message in for authentication-->
+            <div class="d-flex justify-content-center">
+              <span class="pb-4 text-danger">{{ErrorMessageFirebase}}</span>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button name="submit" class="btn btn-primary mx-2" value="submit">Log in</button>
+              <button class="btn btn-danger" type="button" (click)="Register()">register</button> <!--once the user click the register button, it is going to use the function-->
+            </div>
+            <span class=" pb-2 text-danger resetPassword" (click)="ResetPassword()">Reset password</span>
+          </form>
+        </div>
+      </div>
+    </div>
+<!--This is the second container, which is for the sign up-->
+    <div class="container mt-5 studentsignup" *ngIf="registerStudentP">
+      <div class="row ">
+        <div class="col-md-4 align-self-center bg-danger text-white text-center">
+          <div class="left-side">
+            <h2 class="py-3">Registration Form</h2>
+          </div>
+        </div>
+        <div class="col-md-8 py-5 border bg-white">
+          <h4 class="pb-4 text-black-50">Please fill with your details</h4>
+          <form class="form" (ngSubmit)="SignUp($event)">
+            <div class="row">
+              <!--              Using two way binding to get the values -->
+              <div class="form-group col-md-6">
+                <span class="text-info">Email address:</span>
+                <input class="form-control" name = "studentEmailPortalSystem"   type="text" [(ngModel)]="studentEmailPortalSystem" required>
+              </div>
+              <div class="form-group col-md-6">
+                <span class="text-info">Password:</span>
+                <input class="form-control" name ="StudentPasswordPortalSystem"  type="password" [(ngModel)]="StudentPasswordPortalSystem" required>
+              </div>
+              <div class="form-group col-md-3">
+                <span class="text-info">First name:</span>
+                <input class="form-control" name ="StudentFnamePortalSystem"   type="text" [(ngModel)]="StudentFnamePortalSystem" required>
+              </div>
+              <div class="form-group col-md-3">
+                <span class="text-info">Last name:</span>
+                <input class="form-control" name ="StudentLnamePortalSystem"  type="text" [(ngModel)]="StudentLnamePortalSystem" required>
+              </div>
+            </div>
+<!--            This is also for authentication-->
+            <div class="justify-content-center d-flex">
+              <span class="pb-4 text-danger">{{ErrorMessageFirebase}}</span>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button class="btn btn-info mx-2" value="submit" name="submit" >Submit</button>
+              <button class="btn btn-danger" type="button" (click)="Cancel()">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+
+
+<app-footer-bar></app-footer-bar>

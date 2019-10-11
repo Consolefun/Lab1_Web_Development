@@ -1,0 +1,78 @@
+<app-nav-bar></app-nav-bar>
+
+<head>
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+
+<div class="container pt-5">
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a routerLink="/portal">Home</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="row">
+
+    <div class="col-xs-12">
+      <h1 class="text-left" id="allDesign">All Design Subcategories</h1>
+      <!-- <h3 class="text-left" id="clickable">Click on any category below to be redirected</h3> -->
+    </div>
+  </div>
+  <hr>
+
+  <!-- First row of subcategories -->
+  <div class="row">
+    <div class="col-sm-4">
+      <!-- Linking image to next page -->
+      <a routerLink="/fashion"> <img class="logo" src="../assets/img/fashion.jpg" title="Fashion Link"> </a>
+
+    </div>
+
+    <div class="col-sm-4">
+      <!-- Linking image to next page -->
+      <a routerLink="/game"> <img class="logo" src="../assets/img/game.jpg" title="Game Link"> </a>
+    </div>
+
+    <div class="col-sm-4">
+      <!-- Linking image to next page -->
+      <a routerLink="/architecture"> <img class="logo" src="../assets/img/architecture.png" title="Architecture Link"> </a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2></h2>
+    </div>
+  </div>
+
+  <!-- Second row of subcategories -->
+  <div class="row">
+    <div class="col-sm-4">
+      <a routerLink="/graphic"> <img class="logo" src="./assets/img/graphic.jpg" title="Graphic Link"> </a>
+    </div>
+
+    <div class="col-sm-4">
+      <a routerLink="/interior"> <img class="logo" src="../assets/img/interior.png" title="Interior Link"> </a>
+    </div>
+
+    <div class="col-sm-4">
+      <a routerLink="/web"> <img class="logo" src="../assets/img/web.jpg" title="Web Link"> </a>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+</body>

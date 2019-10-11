@@ -1,0 +1,50 @@
+<!--This is to show the navbar from a different component-->
+<app-nav-bar></app-nav-bar>
+
+<!--Use bootstrap to style the page-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3 px-0  position-fixed">
+      <!--      this is to show the side bar from a different component-->
+      <app-side-bar> </app-side-bar>
+    </div>
+    <div class="col-9 offset-3" id="main">
+
+
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col">
+          </div>
+          <div class="col-6 search-container">
+            <input class="form-control" name = "StudentFirstName"  type="text" [(ngModel)]="bookTitle" required>
+            <button type="submit" class="btn btn-primary mt-5" (click)="whenSearch()">Search</button>
+
+          </div>
+          <div class="col pt-5"></div>
+        </div>
+      </div>
+      <div>
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col-sm" *ngFor="let book of bookList">
+              <div>
+                <h3 class="center-align  text text-center card-header"><a target="_blank" href="{{book.image}}">{{book.title}}</a></h3>
+              </div>
+              <div class=" text-center card-img card-body">
+                <a  href=" {{book.image}}" target="_blank"> <img src="{{book.url}}"></a>
+                <h5 class="text-center">{{book.author}}</h5>
+              </div>
+            </div>
+            <div class="col-sm"></div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+

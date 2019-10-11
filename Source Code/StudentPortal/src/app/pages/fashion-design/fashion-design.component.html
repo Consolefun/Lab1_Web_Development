@@ -1,0 +1,75 @@
+<app-nav-bar></app-nav-bar>
+
+<head>
+  <!-- Making web page reactive -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+
+
+  <title>Fashion Design</title>
+
+</head>
+<body>
+
+<div class="container pt-5">
+  <div class="container">
+    <nav>
+      <ul>
+        <!-- Link back button back to all design page -->
+        <li><a routerLink="/all">Back</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="subcategory" >
+    <div class="container-fluid" style="margin-top:80px" id="topthings">
+      <div
+        class="jumbotron-fluid subcategoryHead" style="text-align: center;"><h2><b>Fashion Design</b></h2>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-8" id="introductiontext">
+
+          <div class="row">
+            <div class="col-sm-6">
+              <h2><b>What do we do?</b></h2>
+              <p class="subcategoryText">Fashion designers create clothes that are functional as well as being aesthetically pleasing.
+                We always consider the demographic that will wear our work and the situations in which our work will be worn.
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <h2><b>Coursework/Skills</b></h2>
+              <!-- Displaying coursework/skills in list -->
+              <ul>
+                <li>Fashion/Textile vocabulary and terminology</li>
+                <li>Consumer trends/behavior</li>
+                <li>Computer-aided design (CAD)</li>
+                <li>Hand drawing</li>
+                <li>Sewing/Tailoring</li>
+                <li>Fashion history and trends</li>
+                <li>Balancing proportions, colors, moods, and textiles</li>
+                <li>Human anatomy</li>
+                <li>Show promotion and production</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-sm-4">
+          <a>
+            <!-- Displaying picture on right -->
+            <img class="img-fluid" style="width:100%" src="../assets/img/verticalfashion.jpg">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>

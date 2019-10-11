@@ -1,0 +1,32 @@
+<!--Here is the side-bar which is simple-->
+
+<div class="wrapper">
+  <nav id="studentsidebar">
+    <div class="sidebar-header">
+      <h3>Courses Portal</h3>
+    </div>
+    <ul class="list-unstyled line">
+      <li>
+        <a routerLink="/portal">Homepage</a>
+      </li>
+      <li>
+        <a routerLink="/course">Online courses</a>
+      </li>
+      <li>
+        <a routerLink="/books">Discover books</a>
+      </li>
+      <li>
+        <a routerLink="/all">All Design</a>
+      </li>
+      <li>
+        <a routerLink="/calendar">Calendar</a>
+      </li>
+      <li class="fixed-bottom">
+        <a routerLink="/setting">Setting</a>
+      </li>
+    </ul>
+  </nav>
+  <div id="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

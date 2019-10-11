@@ -1,0 +1,27 @@
+//style for the page
+section {
+
+  position: relative;
+  overflow: hidden;
+  height: 670px;
+  width: 100%;
+  background-size: cover; background-position: center center;
+}
+
+.container.studentlogin{
+  padding-top: 150px;}
+
+.container.studentsignup{
+  padding-top: 100px;
+}
+.resetPassword:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #dc3545!important}
+
+//This one is for screen size
+@media (max-width: 992px) {
+  .container.studentsignup{
+    padding-top: 0px;
+  }
+}
+

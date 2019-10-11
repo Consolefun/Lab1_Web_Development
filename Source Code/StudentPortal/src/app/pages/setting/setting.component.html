@@ -1,0 +1,77 @@
+<!--This is to show the navbar from a different component-->
+<app-nav-bar></app-nav-bar>
+
+<!--Use bootstrap to style the page-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3 px-0  position-fixed">
+<!--      this is to show the side bar from a different component-->
+      <app-side-bar> </app-side-bar>
+    </div>
+    <div class="col-9 offset-3" id="main">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col">
+            <div class="col-xs-9">
+							<span class="profileImage">
+								<img alt=" Avatar" src="http://bootdey.com/img/Content/avatar/avatar6.png">
+							</span>
+            </div>
+<!--            <button class="btn btn-success mx-5 mt-2" accept="image/*" (change)="imagechosen($event.target.files)">Choose image</button>-->
+          </div>
+          <div class="col-9">
+            <div class="container pt-5">
+              <div class="row">
+                <div class="col">
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label>First name</label>
+                        <input class="form-control" name = "StudentFirstName"  type="text" [(ngModel)]="StudentFirstName" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label>Last name</label>
+                        <input class="form-control" name = "StudentLastName"  type="text" [(ngModel)]="StudentLastName" required>
+                      </div>
+                      <div class="form-group col-md-12">
+                        <label>Add another Email</label>
+                        <input type="email" class="form-control"  name = "SecondSecondEmail" placeholder="Email" [(ngModel)]="SecondEmailAddress" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Address</label>
+                      <input type="text" class="form-control" name = "StudentAddressOne" placeholder="1234 Main St" [(ngModel)]="StudentAddressOne" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Address 2</label>
+                      <input type="text" class="form-control" name = "StudentAddressTwo" placeholder="Apartment, studio, or floor" [(ngModel)]="StudentAddressTwo" required>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label>City</label>
+                        <input type="text" class="form-control" name = "StudentCity"  [(ngModel)]="StudentCity" required>
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label>State</label>
+                        <input type="text" class="form-control" name = "StudentState"  [(ngModel)]="StudentState" required>
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label>Zip</label>
+                        <input type="text" class="form-control"  name = "StudentZipCode" [(ngModel)]="StudentZipCode" required>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" (click)="UpdateStudentP()">Update</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
