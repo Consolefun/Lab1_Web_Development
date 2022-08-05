@@ -29,7 +29,7 @@
     "http-errors": "^1.7.3",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
-    "mongoose": "^5.7.3",
+    "mongoose": "^5.7.5",
     "morgan": "^1.9.1",
     "open-iconic": "^1.1.1",
     "popper.js": "^1.15.0",
